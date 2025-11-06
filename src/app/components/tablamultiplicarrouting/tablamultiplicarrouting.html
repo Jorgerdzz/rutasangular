@@ -1,0 +1,18 @@
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>OPERACIÓN</th>
+                <th>RESULTADO</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(resultado of resultados; track resultado; let i = $index){
+                <tr>
+                    <td>{{numero}} * {{ i + 1}}</td>
+                    <td>{{resultado}}</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

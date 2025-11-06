@@ -1,0 +1,10 @@
+<div>
+    <ul id="menu">
+        @for(num of numeros; track num){
+            <li>
+                <a [routerLink]="['/tablamultiplicar', num]">Tabla multiplicar {{num}}</a>
+            </li>
+        }
+        
+    </ul>   
+</div>

@@ -7,6 +7,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { ModuleWithProviders } from "@angular/core";
 import { NotfoundComponent } from "./components/notfound.component/notfound.component";
 import { NumeroDobleComponent } from "./components/numero.doble.component/numero.doble.component";
+import { Tablamultiplicarrouting } from "./components/tablamultiplicarrouting/tablamultiplicarrouting";
 
 const appRoutes: Routes = [
     {path: "", component: Home},
@@ -14,6 +15,7 @@ const appRoutes: Routes = [
     {path: "musica", component: Musica},
     {path: "numerodoble", component:NumeroDobleComponent},
     {path: "numerodoble/:numero", component: NumeroDobleComponent},
+    {path: "tablamultiplicar/:numero", component: Tablamultiplicarrouting},
     {path: "**", component: NotfoundComponent}
 ]
 
