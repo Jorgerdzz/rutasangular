@@ -77,6 +77,52 @@ h2[style*="color:red"] {
   border: 3px solid rgba(255, 68, 68, 0.5);
 }
 
+/* Estilos para el botón */
+button {
+  margin-top: 40px;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+button::before {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+  border-color: rgba(255, 255, 255, 0.6);
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+button:hover::before {
+  left: 20px;
+  animation: pulse 0.5s ease;
+}
+
+button:active {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: 2.5rem;
@@ -95,5 +141,16 @@ h2[style*="color:red"] {
   div {
     padding: 30px 15px;
     min-height: 300px;
+  }
+  
+  button {
+    font-size: 1rem;
+    padding: 12px 30px;
+    margin-top: 30px;
+  }
+  
+  button::before {
+    font-size: 1.2rem;
+    left: 10px;
   }
 }

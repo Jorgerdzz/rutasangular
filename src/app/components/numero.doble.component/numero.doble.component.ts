@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
   selector: 'app-numero.doble.component',
@@ -12,7 +12,10 @@ export class NumeroDobleComponent implements OnInit {
   public numero!: number;
   public doble: number;
 
-  constructor(private _activeRoute: ActivatedRoute){
+  constructor(
+    private _activeRoute: ActivatedRoute,
+    private _router: Router
+  ){
     this.doble = 0;
   }
 
@@ -23,6 +26,10 @@ export class NumeroDobleComponent implements OnInit {
         this.doble = this.numero * 2;
       }
     })
+  }
+
+  goToHome(): void{
+    this._router.navigate(['/']);
   }
 
 }
