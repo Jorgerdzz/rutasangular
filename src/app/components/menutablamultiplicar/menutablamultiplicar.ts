@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-menu-tablamultiplicar',
@@ -11,20 +11,17 @@ export class Menutablamultiplicar {
   public numeros: Array<number>;
 
   constructor(){
-    this.numeros = []
+    this.numeros = this.generarArray()
   }
 
-  ngOnInit(): void{
-    this.generarArray();
-  }
 
-  generarArray(): void{
+  generarArray(): Array<number>{
     let aux = [];
     for(let i=0; i<=5; i++){
       let numero = Math.floor(Math.random()*100);
       aux.push(numero)
     }
-    this.numeros = aux;
+    return aux;
   }
 
 }

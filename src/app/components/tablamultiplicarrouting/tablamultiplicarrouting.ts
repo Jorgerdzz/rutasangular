@@ -7,7 +7,7 @@ import { ActivatedRoute, Params } from '@angular/router';
   templateUrl: './tablamultiplicarrouting.html',
   styleUrl: './tablamultiplicarrouting.css',
 })
-export class Tablamultiplicarrouting {
+export class Tablamultiplicarrouting implements OnInit {
 
   public numero!: number;
   public resultados: Array<number>
