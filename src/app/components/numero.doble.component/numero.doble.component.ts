@@ -32,4 +32,8 @@ export class NumeroDobleComponent implements OnInit {
     this._router.navigate(['/']);
   }
 
+  redirect(numero: number):void{
+    this._router.navigate(['/numerodoble', numero])
+  }
+
 }
